@@ -10,7 +10,7 @@ import SmoothFunctions as SF
 import FourierFilter as FF
 
 
-pic = cv.imread("puppy.jpg", cv.IMREAD_GRAYSCALE)
+pic = cv.imread('puppy.jpg', cv.IMREAD_GRAYSCALE)
 
 def Hest(hkern,shape):
     M,N=shape

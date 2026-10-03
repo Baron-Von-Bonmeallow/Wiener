@@ -3,8 +3,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import cv2
 
-path = r"C:\Users\memip\Downloads\puppy.jpg"
-pic = cv2.imread(path)
+pic = cv2.imread('puppy.jpg')
+if pic is None:
+    raise FileNotFoundError("Could not find or open 'puppy.jpg'. Make sure it's in the same folder.")
+
+# 3. Convert BGR to RGB
 pic = cv2.cvtColor(pic, cv2.COLOR_BGR2RGB)
 
 plt.imshow(pic)
